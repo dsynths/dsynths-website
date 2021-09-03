@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+@import "./scrollbar.css";
+
+body {
+  height: 100vh;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#root {
+  height: 100vh;
+}
