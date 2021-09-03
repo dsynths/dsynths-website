@@ -28,19 +28,12 @@ export const Layout = ({ children }) => {
   }
 
   return (
-    <>
-      <style dangerouslySetInnerHTML={{__html: `
-        .btn:hover {
-          cursor: pointer;
-        }
-      `}} />
-      <Wrapper>
-        {size.width > 600 && <DesktopNavbar handleToggled={handleToggled}/>}
-        {size.width <= 600 && <MobileNavbar handleToggled={handleToggled}/>}
-        <Content isDesktop={size.width > 600}>{children}</Content >
-        <Footer />
-        <Sidebar toggled={toggled} handleToggled={handleToggled}/>
-      </Wrapper>
-    </>
+    <Wrapper>
+      {size.width > 600 && <DesktopNavbar handleToggled={handleToggled}/>}
+      {size.width <= 600 && <MobileNavbar handleToggled={handleToggled}/>}
+      <Content isDesktop={size.width > 600}>{children}</Content >
+      <Footer />
+      <Sidebar toggled={toggled} handleToggled={handleToggled}/>
+    </Wrapper>
   )
 }
