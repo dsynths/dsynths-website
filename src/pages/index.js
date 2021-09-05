@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,16 +11,16 @@ const Wrapper = styled.div`
   overflow-x: hidden;
   text-align: center;
   color: black;
-`;
+`
 
 export default function Home() {
   return (
     <Wrapper>
-      This will be the home page. The navbar and footer are fixed in position,
-      and the page content will automatically scroll on overflow. The page is
-      not behind the navbar/footer nor uses a margin, thanks to flex-grow. Try
-      zooming in on this page (500%) and you will see the effects when
-      scrolling.
+      <h1 className="font-bold text-3xl">dSynths</h1>
+      This will be the home page. The navbar and footer are fixed in position, and the page content
+      will automatically scroll on overflow. The page is not behind the navbar/footer nor uses a
+      margin, thanks to flex-grow. Try zooming in on this page (500%) and you will see the effects
+      when scrolling.
     </Wrapper>
-  );
+  )
 }

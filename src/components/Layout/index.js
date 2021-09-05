@@ -1,31 +1,31 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
-import { DesktopNavbar } from "./Navigation/Desktop";
-import { MobileNavbar } from "./Navigation/Mobile";
-import { Sidebar } from "./Navigation/Sidebar";
-import { Footer } from "./Footer";
+import { DesktopNavbar } from './Navigation/Desktop'
+import { MobileNavbar } from './Navigation/Mobile'
+import { Sidebar } from './Navigation/Sidebar'
+import { Footer } from './Footer'
 
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { useWindowSize } from '../../hooks/useWindowSize'
 
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-`;
+`
 
 const Content = styled.div`
   flex: 1;
   overflow: auto;
-`;
+`
 
 const Layout = ({ children }) => {
-  const size = useWindowSize();
-  const [toggled, setToggled] = useState(false);
+  const size = useWindowSize()
+  const [toggled, setToggled] = useState(false)
 
   const handleToggled = (state) => {
-    setToggled(state);
-  };
+    setToggled(state)
+  }
 
   return (
     <Wrapper>
@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       <Footer />
       <Sidebar toggled={toggled} handleToggled={handleToggled} />
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

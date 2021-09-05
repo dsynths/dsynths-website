@@ -1,51 +1,69 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  height: 100vh;
-  font-size: 1rem;
-  color: #ffffff;
-}
+@layer base {
+  @font-face {
+    font-family: Favorit;
+    font-weight: 400;
+    src: url(/fonts/Favorit_Regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: Favorit;
+    font-weight: medium;
+    src: url(/fonts/Favorit_Medium.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: Favorit;
+    font-weight: bold;
+    src: url(/fonts/Favorit_Bold.ttf) format('truetype');
+  }
 
-* {
-  margin: 0;
-  padding: 0;
+  body {
+    @apply h-full text-base;
+  }
 
-  font-family: "Work Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  * {
+    margin: 0;
+    padding: 0;
 
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-}
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+    @apply font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
-#root {
-  height: 100vh;
-}
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
 
-* {
-  scrollbar-color: #6c7284 transparent;
-}
+  #root {
+    height: 100vh;
+  }
 
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 5px;
-}
+  * {
+    scrollbar-color: #6c7284 transparent;
+  }
 
-*::-webkit-scrollbar-thumb {
-  background: #6c7284;
-  border: 1px solid black;
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #6c7284;
+    border: 1px solid black;
+  }
 }
