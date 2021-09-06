@@ -1,12 +1,7 @@
-import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { DesktopNavbar } from './Navigation/Desktop'
-import { MobileNavbar } from './Navigation/Mobile'
-import { Sidebar } from './Navigation/Sidebar'
 import { Footer } from './Footer'
-
-import { useWindowSize } from '../../hooks/useWindowSize'
+import Navbar from './NavBar'
 
 const Wrapper = styled.div`
   height: 100%;
@@ -20,20 +15,11 @@ const Content = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const size = useWindowSize()
-  const [toggled, setToggled] = useState(false)
-
-  const handleToggled = (state) => {
-    setToggled(state)
-  }
-
   return (
     <Wrapper>
-      {size.width > 600 && <DesktopNavbar handleToggled={handleToggled} />}
-      {size.width <= 600 && <MobileNavbar handleToggled={handleToggled} />}
-      <Content isDesktop={size.width > 600}>{children}</Content>
+      <Navbar />
+      <Content>{children}</Content>
       <Footer />
-      <Sidebar toggled={toggled} handleToggled={handleToggled} />
     </Wrapper>
   )
 }

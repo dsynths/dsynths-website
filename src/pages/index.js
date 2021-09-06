@@ -17,10 +17,37 @@ export default function Home() {
   return (
     <Wrapper>
       <h1 className="font-bold text-3xl">dSynths</h1>
-      This will be the home page. The navbar and footer are fixed in position, and the page content
-      will automatically scroll on overflow. The page is not behind the navbar/footer nor uses a
-      margin, thanks to flex-grow. Try zooming in on this page (500%) and you will see the effects
-      when scrolling.
+      <p>
+        This will be the home page. The navbar and footer are fixed in position, and the page
+        content will automatically scroll on overflow. The page is not behind the navbar/footer nor
+        uses a margin, thanks to flex-grow. Try zooming in on this page (500%) and you will see the
+        effects when scrolling.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi magni, ullam nisi expedita
+        ipsam iusto doloremque amet ducimus maiores nobis vitae similique porro quaerat recusandae,
+        voluptatibus repellendus dolorum provident? Atque.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi magni, ullam nisi expedita
+        ipsam iusto doloremque amet ducimus maiores nobis vitae similique porro quaerat recusandae,
+        voluptatibus repellendus dolorum provident? Atque.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi magni, ullam nisi expedita
+        ipsam iusto doloremque amet ducimus maiores nobis vitae similique porro quaerat recusandae,
+        voluptatibus repellendus dolorum provident? Atque.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi magni, ullam nisi expedita
+        ipsam iusto doloremque amet ducimus maiores nobis vitae similique porro quaerat recusandae,
+        voluptatibus repellendus dolorum provident? Atque.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi magni, ullam nisi expedita
+        ipsam iusto doloremque amet ducimus maiores nobis vitae similique porro quaerat recusandae,
+        voluptatibus repellendus dolorum provident? Atque.
+      </p>
     </Wrapper>
   )
 }

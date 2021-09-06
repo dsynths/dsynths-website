@@ -10,7 +10,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.3.1",
-    "tailwindcss": "^2.2.9"
+    "tailwindcss": "^2.2.9",
+    "tailwindcss-classnames": "^2.2.3"
   },
   "scripts": {
     "dev": "next dev",
