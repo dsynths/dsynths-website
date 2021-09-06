@@ -23,6 +23,10 @@
     @apply h-full text-base;
   }
 
+  body > div {
+    @apply h-screen;
+  }
+
   * {
     margin: 0;
     padding: 0;
