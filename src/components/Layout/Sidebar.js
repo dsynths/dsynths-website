@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { classnames } from 'tailwindcss-classnames'
 
 import useOutsideClick from '../../hooks/useOutsideClick'
+import { CrossIcon } from '../Icons'
 
 export const Sidebar = ({ toggled, handleToggled, children }) => {
   const wrapperRef = useRef(null)
@@ -20,6 +21,15 @@ export const Sidebar = ({ toggled, handleToggled, children }) => {
         }
       )}
     >
+      <div className="pt-4 pr-4 flex justify-end w-full">
+        <button
+          onClick={() => {
+            handleToggled(false)
+          }}
+        >
+          <CrossIcon />
+        </button>
+      </div>
       {children}
     </div>
   )

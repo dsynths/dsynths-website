@@ -53,10 +53,6 @@
     -moz-appearance: textfield;
   }
 
-  #root {
-    height: 100vh;
-  }
-
   * {
     scrollbar-color: #6c7284 transparent;
   }

@@ -1,20 +1,65 @@
 import { useState } from 'react'
+import Link from 'next/link'
+import { classnames } from 'tailwindcss-classnames'
 
 import Logo from '../Logo'
 import * as componentClasses from '../styles'
 import { Sidebar } from './Sidebar'
+import { ChevronDown } from '../Icons'
+import Dropdown from '../Dropdown'
 
 const NavLinks = () => (
   <>
-    <a href="#" className={componentClasses.link}>
-      Products
-    </a>
-    <a href="#" className={componentClasses.link}>
-      Learn
-    </a>
-    <a href="#" className={componentClasses.link}>
-      Developers
-    </a>
+    <Dropdown
+      toggleComponent={
+        <button
+          className={classnames(
+            componentClasses.link,
+            'flex items-center space-x-2 cursor-pointer'
+          )}
+        >
+          <span>Products</span>
+          <ChevronDown className="w-3 h-3" />
+        </button>
+      }
+    >
+      <div className="relative bg-white px-6 py-3">
+        <ul className="flex flex-col space-y-2">
+          <li>
+            <Link href="#">
+              <a className={componentClasses.menuLink}>Exchange</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#">
+              <a className={componentClasses.menuLink}>iFrame Integration</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#">
+              <a className={componentClasses.menuLink}>Synth API</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#">
+              <a className={componentClasses.menuLink}>Fiat On-Ramp</a>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </Dropdown>
+    <ul className="flex items-center space-x-8">
+      <li>
+        <Link href="#">
+          <a className={componentClasses.link}>Learn</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="#">
+          <a className={componentClasses.link}>Developers</a>
+        </Link>
+      </li>
+    </ul>
   </>
 )
 
@@ -26,12 +71,14 @@ const Navbar = () => {
   }
 
   return (
-    <div className="sticky flex justify-between px-5 py-3">
-      <div className="flex items-center">
-        <Logo width={32} height={32} className="mr-2" />
-        <span className="hidden md:inline text-lg">dSYNTHS</span>
-      </div>
-      <nav className="hidden md:flex items-center gap-8">
+    <div className="sticky flex justify-between px-5 py-3 shadow-nav">
+      <Link href="/">
+        <a className="flex items-center space-x-2">
+          <Logo width={32} height={32} />
+          <span className="hidden md:block text-lg leading-none">dSYNTHS</span>
+        </a>
+      </Link>
+      <nav className="hidden md:flex items-center space-x-8">
         <NavLinks />
       </nav>
       <div className="flex">
@@ -66,16 +113,42 @@ const Navbar = () => {
         </svg>
       </button>
       <Sidebar toggled={sidebarOpen} handleToggled={toggleSidebar}>
-        <nav className="flex flex-col py-8 px-4 gap-4">
+        <nav className="flex flex-col py-8 px-6 space-y-4">
           <div>Products</div>
-          <div className="flex flex-col px-6 gap-4">
-            <a href="#">Exchange</a>
-            <a href="#">iFrame Integration</a>
-            <a href="#">Synth API</a>
-            <a href="#">Fiat On-Ramp</a>
-          </div>
-          <a href="#">Learn</a>
-          <a href="#">Developers</a>
+          <ul className="flex flex-col px-6 space-y-4">
+            <li>
+              <Link href="#">
+                <a className={componentClasses.menuLink}>Exchange</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#">
+                <a className={componentClasses.menuLink}>iFrame Integration</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#">
+                <a className={componentClasses.menuLink}>Synth API</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#">
+                <a className={componentClasses.menuLink}>Fiat On-Ramp</a>
+              </Link>
+            </li>
+          </ul>
+          <ul className="flex flex-col space-y-4">
+            <li>
+              <Link href="#">
+                <a className={componentClasses.menuLink}>Learn</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#">
+                <a className={componentClasses.menuLink}>Developers</a>
+              </Link>
+            </li>
+          </ul>
         </nav>
       </Sidebar>
     </div>
