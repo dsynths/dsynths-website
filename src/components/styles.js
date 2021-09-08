@@ -10,6 +10,8 @@ export const button = classnames(
   'px-5'
 )
 
-export const link = classnames('no-underline hover:text-purple focus:text-purple')
+export const link = classnames('no-underline hover:text-ds-purple focus:text-ds-purple')
 
 export const menuLink = classnames(link, 'flex')
+
+export const footerLink = classnames('no-underline hover:text-white focus:text-white')

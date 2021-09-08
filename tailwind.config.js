@@ -10,7 +10,7 @@ module.exports = {
         sans: ['Favorit', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        purple: '#6D44FF',
+        'ds-purple': '#6D44FF',
       },
       boxShadow: {
         nav: '0px 1px 0px #E0E0E0',

@@ -1,26 +1,13 @@
-import styled from 'styled-components'
-
-import { Footer } from './Footer'
+import Footer from './Footer'
 import Navbar from './NavBar'
-
-const Wrapper = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-`
-
-const Content = styled.div`
-  flex: 1;
-  overflow: auto;
-`
 
 const Layout = ({ children }) => {
   return (
-    <Wrapper>
+    <div className="h-full min-h-screen flex flex-col">
       <Navbar />
-      <Content>{children}</Content>
+      <div className="flex-1 overflow-auto px-6">{children}</div>
       <Footer />
-    </Wrapper>
+    </div>
   )
 }
 
