@@ -20,7 +20,7 @@
   }
 
   body {
-    @apply h-full text-base;
+    @apply h-full text-base text-ds-black;
   }
 
   body > div {
@@ -65,5 +65,19 @@
   *::-webkit-scrollbar-thumb {
     background: #6c7284;
     border: 1px solid black;
+  }
+
+  /* Custom Styles */
+
+  .hero-gradient {
+    background: linear-gradient(
+      148.07deg,
+      rgba(74, 168, 236, 0.35) 1.45%,
+      rgba(67, 0, 209, 0.1225) 100%
+    );
+  }
+
+  .title-gradient {
+    background: linear-gradient(148.07deg, #4700dd, #5e98ea);
   }
 }

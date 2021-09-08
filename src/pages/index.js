@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   color: black;
 `
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="my-6 mx-auto max-w-[65ch]">
       <h1 className="font-bold text-3xl mb-4">dSynths</h1>
@@ -41,3 +41,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
