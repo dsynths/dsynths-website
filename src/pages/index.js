@@ -1,18 +1,3 @@
-import React from 'react'
-import styled from 'styled-components'
-
-const Wrapper = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  text-align: center;
-  color: black;
-`
-
 const Home = () => {
   return (
     <div className="my-6 mx-auto max-w-[65ch]">
