@@ -1,19 +1,4 @@
-import React from 'react'
-import styled from 'styled-components'
-
-const Wrapper = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  text-align: center;
-  color: black;
-`
-
-export default function Home() {
+const Home = () => {
   return (
     <div className="my-6 mx-auto max-w-[65ch]">
       <h1 className="font-bold text-3xl mb-4">dSynths</h1>
@@ -41,3 +26,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
