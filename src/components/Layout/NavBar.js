@@ -1,53 +1,81 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import Link from 'next/link'
 import { classnames } from 'tailwindcss-classnames'
+import { Menu, Transition } from '@headlessui/react'
 
 import Logo from '../Logo'
 import * as componentClasses from '../styles'
 import { Sidebar } from './Sidebar'
 import { ChevronDown } from '../Icons'
-import Dropdown from '../Dropdown'
 
 const NavLinks = () => (
   <>
-    <Dropdown
-      toggleComponent={
-        <button
-          className={classnames(
-            componentClasses.link,
-            'flex items-center space-x-2 cursor-pointer'
-          )}
-        >
-          <span>Products</span>
-          <ChevronDown className="w-3 h-3" />
-        </button>
-      }
-    >
-      <div className="relative bg-white px-6 py-3">
-        <ul className="flex flex-col space-y-2">
-          <li>
-            <Link href="#">
-              <a className={componentClasses.menuLink}>Exchange</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/products/iframe">
-              <a className={componentClasses.menuLink}>iFrame Integration</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/products/api">
-              <a className={componentClasses.menuLink}>Synth API</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/products/fiat">
-              <a className={componentClasses.menuLink}>Fiat On-Ramp</a>
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </Dropdown>
+    <Menu as="div" className="relative">
+      <Menu.Button
+        className={classnames(
+          componentClasses.link,
+          'flex items-center space-x-2 cursor-pointer focus:outline-none'
+        )}
+      >
+        <span>Products</span>
+        <ChevronDown className="w-3 h-3" />
+      </Menu.Button>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-200"
+        enterFrom="opacity-0 -translate-y-1"
+        enterTo="opacity-100 translate-y-0"
+        leave="transition ease-in duration-150"
+        leaveFrom="opacity-100 translate-y-0"
+        leaveTo="opacity-0 -translate-y-1"
+      >
+        <Menu.Items className="absolute z-10 w-max max-w-sm px-4 mt-6 transform -translate-x-1/2 left-1/2 sm:px-0 focus:outline-none">
+          <div className="overflow-hidden rounded-lg shadow-xl ring-1 ring-black ring-opacity-5">
+            <div className="relative bg-white px-6 py-3">
+              <ul className="flex flex-col space-y-2">
+                <Menu.Item>
+                  {({ active }) => (
+                    <li>
+                      <Link href="/products/exchange">
+                        <a className={componentClasses.menuLink(active)}>Exchange</a>
+                      </Link>
+                    </li>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <li>
+                      <Link href="/products/iframe">
+                        <a className={componentClasses.menuLink(active)}>iFrame Integration</a>
+                      </Link>
+                    </li>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <li>
+                      <Link href="/products/api">
+                        <a className={componentClasses.menuLink(active)}>Synth API</a>
+                      </Link>
+                    </li>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <li>
+                      <Link href="/products/fiat">
+                        <a className={componentClasses.menuLink(active)}>Fiat On-Ramp</a>
+                      </Link>
+                    </li>
+                  )}
+                </Menu.Item>
+              </ul>
+            </div>
+          </div>
+        </Menu.Items>
+      </Transition>
+    </Menu>
+
     <ul className="flex items-center space-x-8">
       <li>
         <Link href="/learn">
@@ -117,35 +145,47 @@ const Navbar = () => {
           <div>Products</div>
           <ul className="flex flex-col px-6 space-y-4">
             <li>
-              <Link href="#">
-                <a className={componentClasses.menuLink}>Exchange</a>
+              <Link href="/products/exchange">
+                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
+                  Exchange
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/products/iframe">
-                <a className={componentClasses.menuLink}>iFrame Integration</a>
+                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
+                  iFrame Integration
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/products/api">
-                <a className={componentClasses.menuLink}>Synth API</a>
+                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
+                  Synth API
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/products/fiat">
-                <a className={componentClasses.menuLink}>Fiat On-Ramp</a>
+                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
+                  Fiat On-Ramp
+                </a>
               </Link>
             </li>
           </ul>
           <ul className="flex flex-col space-y-4">
             <li>
               <Link href="/learn">
-                <a className={componentClasses.menuLink}>Learn</a>
+                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
+                  Learn
+                </a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className={componentClasses.menuLink}>Developers</a>
+                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
+                  Developers
+                </a>
               </Link>
             </li>
           </ul>
