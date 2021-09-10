@@ -31,12 +31,12 @@ const NavLinks = () => (
             </Link>
           </li>
           <li>
-            <Link href="#">
+            <Link href="/products/iframe">
               <a className={componentClasses.menuLink}>iFrame Integration</a>
             </Link>
           </li>
           <li>
-            <Link href="#">
+            <Link href="/products/api">
               <a className={componentClasses.menuLink}>Synth API</a>
             </Link>
           </li>
@@ -122,12 +122,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/products/iframe">
                 <a className={componentClasses.menuLink}>iFrame Integration</a>
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/products/api">
                 <a className={componentClasses.menuLink}>Synth API</a>
               </Link>
             </li>
