@@ -8,7 +8,7 @@ const APIPage = () => {
         <p
           className="text-xl mt-2"
         >
-          We've got all the info you need.
+          We&apos;ve got all the info you need.
         </p>
       </div>
       <div

@@ -50,7 +50,7 @@ const NavLinks = () => (
     </Dropdown>
     <ul className="flex items-center space-x-8">
       <li>
-        <Link href="#">
+        <Link href="/learn">
           <a className={componentClasses.link}>Learn</a>
         </Link>
       </li>
@@ -139,7 +139,7 @@ const Navbar = () => {
           </ul>
           <ul className="flex flex-col space-y-4">
             <li>
-              <Link href="#">
+              <Link href="/learn">
                 <a className={componentClasses.menuLink}>Learn</a>
               </Link>
             </li>

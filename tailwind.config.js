@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         'ds-purple': '#6D44FF',
         'ds-black': '#34363E',
+        'ds-grey': '#A1A1A1',
       },
       boxShadow: {
         nav: '0px 1px 0px #E0E0E0',
