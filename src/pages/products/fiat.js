@@ -1,8 +1,9 @@
+import { classnames } from 'tailwindcss-classnames'
 import * as componentClasses from '../../components/styles'
 
 const FiatPage = () => {
   return (
-    <div className={componentClasses.heroContainer}>
+    <div className={classnames(componentClasses.heroContainer, 'h-full')}>
       <div>
         <h1 className={componentClasses.productTitle}>Fiat On-Ramp</h1>
         <p className="text-xl mt-2">Top up your wallet directly from your bank account.</p>

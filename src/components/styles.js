@@ -21,7 +21,7 @@ export const productTitle = classnames(
 )
 
 export const heroContainer = classnames(
-  'flex flex-col md:flex-row justify-around items-center hero-gradient pt-16 md:pt-28 pb-12 md:pb-20 px-6 space-x-2 space-y-9'
+  'flex flex-col md:flex-row justify-around items-center hero-gradient pt-16 md:pt-28 pb-12 md:pb-20 px-6 space-x-2 space-y-9 md:space-y-0'
 )
 
 export const card = classnames(

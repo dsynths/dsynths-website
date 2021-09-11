@@ -3,7 +3,7 @@ import * as componentClasses from '../components/styles'
 
 const LearnPage = () => {
   return (
-    <div className={componentClasses.heroContainer}>
+    <div className={classnames(componentClasses.heroContainer, 'h-full')}>
       <div
         style={{
           width: '544px',
