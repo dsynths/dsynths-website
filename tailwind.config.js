@@ -13,9 +13,12 @@ module.exports = {
         'ds-purple': '#6D44FF',
         'ds-black': '#34363E',
         'ds-grey': '#A1A1A1',
+        'ds-gpurple': '#4700DD',
+        'ds-gblue': '#5E98EA',
       },
       boxShadow: {
         nav: '0px 1px 0px #E0E0E0',
+        card: '0px 0px 10px 5px rgba(0, 0, 0, 0.05);',
       },
     },
   },

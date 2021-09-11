@@ -10,13 +10,17 @@
   }
   @font-face {
     font-family: Favorit;
-    font-weight: medium;
+    font-weight: 500;
     src: url(/fonts/Favorit_Medium.ttf) format('truetype');
   }
   @font-face {
     font-family: Favorit;
-    font-weight: bold;
+    font-weight: 700;
     src: url(/fonts/Favorit_Bold.ttf) format('truetype');
+  }
+
+  html {
+    @apply overflow-hidden;
   }
 
   body {
@@ -36,9 +40,7 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
 
-    @apply font-sans;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply font-sans antialiased;
   }
 
   /* Chrome, Safari, Edge, Opera */
@@ -60,6 +62,7 @@
   /* Works on Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
   }
 
   *::-webkit-scrollbar-thumb {
@@ -78,6 +81,10 @@
   }
 
   .title-gradient {
-    background: linear-gradient(148.07deg, #4700dd, #5e98ea);
+    @apply bg-gradient-to-br from-ds-gpurple to-ds-gblue;
+  }
+
+  .section-gradient {
+    background: linear-gradient(0, #e8e8ed 0%, rgba(232, 232, 237, 0) 40.65%);
   }
 }
