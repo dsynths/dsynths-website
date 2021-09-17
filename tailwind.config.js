@@ -11,6 +11,7 @@ module.exports = {
       },
       colors: {
         'ds-purple': '#6D44FF',
+        'ds-lpurple': '#5630DE',
         'ds-black': '#34363E',
         'ds-grey': '#A1A1A1',
         'ds-gpurple': '#4700DD',

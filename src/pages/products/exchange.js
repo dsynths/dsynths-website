@@ -8,7 +8,7 @@ const ExchangePage = () => {
           <h1 className={componentClasses.productTitle}>
             Trade Synthetics
             <br />
-            Stocks, Commodities & Crypto
+            Stocks, Commodities &amp; Crypto
           </h1>
           <p className="text-xl mt-2">Low Fees. No Slippage. No KYC.</p>
         </div>
@@ -19,7 +19,7 @@ const ExchangePage = () => {
 
       <section className="bg-white text-center py-16">
         <h2 className="text-4xl font-medium">A Trading Interface for All</h2>
-        <p className="text-lg mt-2">Running on & interacting with multiple blockchains.</p>
+        <p className="text-lg mt-2">Running on &amp; interacting with multiple blockchains.</p>
         <div className="overflow-x-auto">
           <div className="mt-16 p-7 grid grid-cols-3 gap-x-6 max-w-5xl w-full min-w-max mx-auto">
             <div className={componentClasses.card}>
@@ -43,7 +43,7 @@ const ExchangePage = () => {
               <div className="text-3xl font-medium my-8">Basic</div>
               <p className="flex-1">
                 Get the latest market information via our REST API, covering: contracts, images,
-                depth & prices. WebSockets are available for direct oracle-price feeds.
+                depth &amp; prices. WebSockets are available for direct oracle-price feeds.
               </p>
               <img
                 className="my-12 mx-auto"
@@ -77,7 +77,7 @@ const ExchangePage = () => {
 
       <section className="text-center py-16 section-gradient">
         <h2 className="text-4xl font-medium">Explore our Markets</h2>
-        <p className="text-lg mt-2">Running on & interacting with multiple blockchains.</p>
+        <p className="text-lg mt-2">Running on &amp; interacting with multiple blockchains.</p>
         <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-2 mt-11">
           <div className={componentClasses.gradientCard}>
             <div className="text-3xl font-medium my-8">

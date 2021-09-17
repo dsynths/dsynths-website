@@ -80,11 +80,51 @@
     );
   }
 
+  .home-hero-gradient {
+    background: linear-gradient(
+      148.07deg,
+      rgba(74, 168, 236, 0.85) 1.45%,
+      rgba(67, 0, 209, 0.3) 100%
+    );
+  }
+
   .title-gradient {
     @apply bg-gradient-to-br from-ds-gpurple to-ds-gblue;
   }
 
   .section-gradient {
     background: linear-gradient(0, #e8e8ed 0%, rgba(232, 232, 237, 0) 40.65%);
+  }
+
+  .homepage-first-section-gradient {
+    background: linear-gradient(180deg, rgba(219, 212, 246, 0) 0%, #e8e8ed 100%);
+  }
+
+  .homepage-mid-section-gradient {
+    background: linear-gradient(180deg, #e8e8ed 0%, rgba(232, 232, 237, 0) 40.65%);
+  }
+
+  .homepage-last-section-gradient {
+    background: linear-gradient(180deg, rgba(232, 232, 237, 0) 0%, rgba(109, 68, 255, 0.28) 100%);
+  }
+
+  .homepage-stat-card-gradient {
+    background: linear-gradient(148.07deg, #4aa8ec 1.45%, rgba(67, 0, 209, 0.35) 100%);
+  }
+
+  .homepage-signup-inst-card-gradient {
+    background: linear-gradient(
+        -148.07deg,
+        rgba(74, 168, 236, 0.25) 1.45%,
+        rgba(67, 0, 209, 0.0875) 100%
+      ),
+      #ffffff;
+  }
+
+  .homepage-stack-card {
+    width: 1000px;
+    height: 250px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
   }
 }
