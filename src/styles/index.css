@@ -84,7 +84,7 @@
     background: linear-gradient(
       148.07deg,
       rgba(74, 168, 236, 0.85) 1.45%,
-      rgba(67, 0, 209, 0.3) 100%
+      rgba(67, 0, 209, 0.45) 100%
     );
   }
 
@@ -119,28 +119,5 @@
         rgba(67, 0, 209, 0.0875) 100%
       ),
       #ffffff;
-  }
-
-  .homepage-stack-card {
-    width: 1000px;
-    height: 250px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
-    border-radius: 25px;
-  }
-
-  .homepage-stack-card:not(:last-child):after {
-    text-align: center;
-    margin: 0 auto;
-    content: '';
-    background: url('/images/homepage-stack-plus.png');
-    background-position: center center;
-    background-size: cover;
-    width: 82px;
-    height: 82px;
-    z-index: 2;
-
-    position: absolute;
-    left: calc(50% - 41px);
-    bottom: -41px;
   }
 }

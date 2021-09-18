@@ -22,7 +22,7 @@ const ExchangePage = () => {
         <p className="text-lg mt-2">Running on &amp; interacting with multiple blockchains.</p>
         <div className="overflow-x-auto">
           <div className="mt-16 p-7 grid grid-cols-3 gap-x-6 max-w-5xl w-full min-w-max mx-auto">
-            <div className={componentClasses.card}>
+            <div className={componentClasses.productCard}>
               <div className="text-3xl font-medium my-8">Simple</div>
               <p className="flex-1">
                 Offer derivatives, and the trading thereof, on your website without the burden of
@@ -35,11 +35,11 @@ const ExchangePage = () => {
                 width={80}
                 height={80}
               />
-              <a className="underline text-gray-400 text-xs" href="#">
+              <a className={componentClasses.productCardLink} href="#">
                 Go to simple ↗
               </a>
             </div>
-            <div className={componentClasses.card}>
+            <div className={componentClasses.productCard}>
               <div className="text-3xl font-medium my-8">Basic</div>
               <p className="flex-1">
                 Get the latest market information via our REST API, covering: contracts, images,
@@ -52,11 +52,11 @@ const ExchangePage = () => {
                 width={80}
                 height={80}
               />
-              <a className="underline text-gray-400 text-xs" href="#">
+              <a className={componentClasses.productCardLink} href="#">
                 Go to basic ↗
               </a>
             </div>
-            <div className={componentClasses.card}>
+            <div className={componentClasses.productCard}>
               <div className="text-3xl font-medium my-8">Advanced</div>
               <p className="flex-1">
                 Load up your blockchain wallet directly from your IBAN account, without interacting
