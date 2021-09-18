@@ -14,7 +14,7 @@ export const Sidebar = ({ toggled, handleToggled, children }) => {
     <div
       ref={wrapperRef}
       className={classnames(
-        'fixed bg-white top-0 bottom-0 right-0 shadow-md transition-all transform duration-200 block min-w-[200px] max-w-[300px] w-full',
+        'fixed z-20 bg-white top-0 bottom-0 right-0 shadow-md transition-all transform duration-200 block min-w-[200px] max-w-[300px] w-full',
         {
           ['opacity-100']: toggled,
           ['opacity-0 pointer-events-none translate-x-2']: !toggled,

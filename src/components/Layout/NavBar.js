@@ -29,7 +29,7 @@ const NavLinks = () => (
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 -translate-y-1"
       >
-        <Menu.Items className="absolute z-10 w-max max-w-sm px-4 mt-6 transform -translate-x-1/2 left-1/2 sm:px-0 focus:outline-none">
+        <Menu.Items className="absolute w-max max-w-sm px-4 mt-6 transform -translate-x-1/2 left-1/2 sm:px-0 focus:outline-none">
           <div className="overflow-hidden rounded-lg shadow-xl ring-1 ring-black ring-opacity-5">
             <div className="relative bg-white px-6 py-3">
               <ul className="flex flex-col space-y-2">
@@ -83,7 +83,8 @@ const NavLinks = () => (
         </Link>
       </li>
       <li>
-        <Link href="#">
+        {/* TODO change the link once we have it */}
+        <Link href="/learn">
           <a className={componentClasses.link}>Developers</a>
         </Link>
       </li>
@@ -99,7 +100,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="sticky flex justify-between px-5 py-3 shadow-nav">
+    <div className="sticky z-10 flex justify-between px-5 py-3 shadow-nav">
       <Link href="/">
         <a className="flex items-center space-x-2">
           <Logo width={32} height={32} />
@@ -182,7 +183,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="#">
+              {/* TODO change link once we have it */}
+              <Link href="/learn">
                 <a className={componentClasses.link} onClick={() => toggleSidebar()}>
                   Developers
                 </a>

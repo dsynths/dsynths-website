@@ -9,12 +9,12 @@ const Home = () => {
     <>
       <div className="home-hero-gradient overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center max-w-5xl px-8 w-full mx-auto">
-          <div className="lg:my-48 mt-16 mb-8">
+          <div className="lg:my-48 mt-16 mb-8 relative md:z-10">
             <h1 className="text-white font-bold text-4xl sm:text-6xl mb-4">
               The Decentralized Stock Exchange
             </h1>
             <p className="text-white text-xl mb-4">No Signup. No KYC. Welcome to Web3.</p>
-            <div className="flex flex-col sm:flex-row items-center sm:space-x-4">
+            <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-4 sm:space-y-0">
               <a className={classnames(componentClasses.buttonPrimary, 'shadow-xl')} href="#">
                 Start Trading Now
               </a>
@@ -270,7 +270,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mt-32">
+        <div className="mt-32 px-4">
           <h2 className="text-4xl mt-0 font-medium">How do I Sign-Up?</h2>
           <p className="text-lg mt-2 mb-10">You don&apos;t have to. Seriously.</p>
 
