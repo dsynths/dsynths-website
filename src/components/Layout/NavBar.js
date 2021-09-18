@@ -100,7 +100,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="sticky z-10 flex justify-between px-5 py-3 shadow-nav">
+    <div className="sticky z-20 flex justify-between px-5 py-3 shadow-nav">
       <Link href="/">
         <a className="flex items-center space-x-2">
           <Logo width={32} height={32} />
