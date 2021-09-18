@@ -16,6 +16,7 @@ const Home = () => {
             src="/images/phone-homepage.png"
             width="956px"
             height="502px"
+            alt=""
             className="mix-blend-multiply"
           />
         </div>
@@ -40,7 +41,7 @@ const Home = () => {
                 height={115}
               />
               <Link href="/products/exchange">
-                <a className="underline text-gray-400 text-xs">Start Trading</a>
+                <a className="underline text-gray-400 hover:text-ds-violet text-xs">Start Trading</a>
               </Link>
             </div>
             <div className={componentClasses.productCard}>
@@ -57,7 +58,7 @@ const Home = () => {
                 height={115}
               />
               <Link href="/products/iframe">
-                <a className="underline text-gray-400 text-xs">Learn More</a>
+                <a className="underline text-gray-400 hover:text-ds-violet text-xs">Learn More</a>
               </Link>
             </div>
             <div className={componentClasses.productCard}>
@@ -74,7 +75,7 @@ const Home = () => {
                 height={115}
               />
               <Link href="/products/api">
-                <a className="underline text-gray-400 text-xs">Learn More</a>
+                <a className="underline text-gray-400 hover:text-ds-violet text-xs">Learn More</a>
               </Link>
             </div>
             <div className={componentClasses.productCard}>
@@ -91,7 +92,7 @@ const Home = () => {
                 height={115}
               />
               <Link href="/products/fiat">
-                <a className="hover:text-lpurple underline text-gray-400 text-xs">Learn More</a>
+                <a className="underline text-gray-400 hover:text-ds-violet text-xs">Learn More</a>
               </Link>
             </div>
           </div>
@@ -104,7 +105,7 @@ const Home = () => {
         <div className="flex flex-col gap-0 flex-wrap w-full min-w-max mx-auto text-center">
           <div
             style={{ background: 'linear-gradient(148.07deg, #585757 1.45%, #000000 100%)' }}
-            className="text-white mx-auto content-center homepage-stack-card p-12"
+            className="relative text-white mx-auto content-center homepage-stack-card p-12"
           >
             <h2 className="text-4xl font-medium">DEUS AMM</h2>
             <p className="text-lg mt-2">
@@ -112,20 +113,8 @@ const Home = () => {
             </p>
             <a className="relative top-20 left-96" href="https://deus.finance">Visit deus.finance ↗</a>
           </div>
-          <img
-            className="my-0 mx-auto relative"
-            style={{
-              top: '-21px',
-              zIndex: 2,
-            }}
-            src="/images/homepage-stack-plus.png"
-            alt=""
-            width={42}
-            height={42}
-          />
           <div
             style={{
-              top: '-42px',
               background:
                 'linear-gradient(148.07deg, rgba(249, 249, 249, 0.01) 1.45%, #CBCAFF 100%)',
             }}
@@ -138,20 +127,8 @@ const Home = () => {
             </p>
             <a className="relative top-20 left-96" href="https://muon.net">Visit muon.net ↗</a>
           </div>
-          <img
-            className="my-0 mx-auto relative"
-            style={{
-              top: '-63px',
-              zIndex: 2,
-            }}
-            src="/images/homepage-stack-plus.png"
-            alt=""
-            width={42}
-            height={42}
-          />
           <div
             style={{
-              top: '-84px',
               background: 'linear-gradient(148.07deg, #4AA8EC 1.45%, rgba(67, 0, 209, 0.35) 100%)',
             }}
             className="text-white mx-auto content-center homepage-stack-card relative p-12"
