@@ -28,7 +28,7 @@ export const buttonPrimary = classnames(
 export const link = classnames('no-underline hover:text-ds-purple focus:text-ds-purple')
 
 export const linkSecondary = classnames(
-  'underline text-white hover:text-ds-violet focus:text-ds-violet'
+  'underline text-white hover:text-ds-violet focus:text-ds-purple'
 )
 
 export const menuLink = (active) => classnames('flex', { 'text-ds-purple': active })
@@ -44,11 +44,11 @@ export const heroContainer = classnames(
 )
 
 export const productCard = classnames(
-  'w-80 px-11 py-6 bg-white shadow-card rounded-3xl ring-1 ring-gray-100 transition-transform hover:-translate-y-1 duration-300 flex flex-col group'
+  'w-80 px-4 py-6 bg-white shadow-card rounded-3xl ring-1 ring-gray-100 transition-transform hover:-translate-y-5 duration-500 flex flex-col group'
 )
 
 export const productCardLink = classnames(
-  'underline text-gray-400 text-xs group-hover:text-ds-violet focus:text-ds-violet outline-none'
+  'underline text-gray-400 text-xs hover:text-ds-purple outline-none'
 )
 
 export const howItWorksCard = classnames(
