@@ -1,32 +1,39 @@
 import Link from 'next/link'
+import { useRef } from 'react'
 import { classnames } from 'tailwindcss-classnames'
 import { PlusIcon } from '../components/Icons'
 
 import * as componentClasses from '../components/styles'
 
 const Home = () => {
+  const productsRef = useRef(null)
+
   return (
     <>
       <div className="home-hero-gradient overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center max-w-5xl px-8 w-full mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center max-w-6xl px-8 w-full mx-auto">
           <div className="lg:my-48 mt-16 mb-8 relative md:z-10">
-            <h1 className="text-white font-bold text-4xl sm:text-6xl mb-4">
-              The Decentralized Stock Exchange
+            <h1 className="text-white font-bold text-4xl mb-4 sm:text-6xl">
+              Dentralized Stock Exchange
             </h1>
             <p className="text-white text-xl mb-4">No Signup. No KYC. Welcome to Web3.</p>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-4 sm:space-y-0">
-              <a className={classnames(componentClasses.buttonPrimary, 'shadow-xl')} href="#">
-                Start Trading Now
-              </a>
-              <a
+              <Link href="/products/exchange">
+                <a className={classnames(componentClasses.buttonPrimary, 'shadow-xl')} href="/products/exchange">
+                  Start Trading Now
+                </a>
+              </Link>
+              <button
                 className={classnames(componentClasses.linkSecondary)}
-                href="#explore-our-products"
+                onClick={() => {
+                  productsRef.current.scrollIntoView({ behavior: 'smooth' })
+                }}
               >
                 or discover our other products
-              </a>
+              </button>
             </div>
           </div>
-          <div className="relative w-full h-full lg:py-16 pb-8">
+          <div className="relative w-full h-full lg:py-16 pb-8" >
             <img
               src="/images/phone-homepage.png"
               width={956}
@@ -38,7 +45,7 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="homepage-first-section-gradient text-center py-16">
+      <section className="homepage-first-section-gradient text-center py-16" ref={productsRef}>
         <h2 id="explore-our-products" className="text-4xl font-medium">
           Explore our Products
         </h2>
