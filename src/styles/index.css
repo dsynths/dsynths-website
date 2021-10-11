@@ -86,6 +86,7 @@
       rgba(74, 168, 236, 0.85) 1.45%,
       rgba(67, 0, 209, 0.45) 100%
     );
+    min-height: 75vh;
   }
 
   .title-gradient {
