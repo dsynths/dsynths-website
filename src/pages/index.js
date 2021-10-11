@@ -19,7 +19,7 @@ const Home = () => {
             <p className="text-white text-xl mb-4">No Signup. No KYC. Welcome to Web3.</p>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-4 sm:space-y-0">
               <Link href="/products/exchange">
-                <a className={classnames(componentClasses.buttonPrimary, 'shadow-xl')}>
+                <a className={classnames(componentClasses.buttonPrimary, 'shadow-xl')} href="/products/exchange">
                   Start Trading Now
                 </a>
               </Link>
