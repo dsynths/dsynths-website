@@ -1,3 +1,4 @@
+import { classnames } from 'tailwindcss-classnames'
 import * as componentClasses from '../../components/styles'
 
 const ExchangePage = () => {
@@ -75,13 +76,13 @@ const ExchangePage = () => {
         </div>
       </section>
 
-      <section className="text-center py-16 section-gradient">
+      <section className="text-center py-16 px-4 section-gradient">
         <h2 className="text-4xl font-medium">Explore our Markets</h2>
         <p className="text-lg mt-2">Running on &amp; interacting with multiple blockchains.</p>
         <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-2 mt-11">
           <div className={componentClasses.gradientCard}>
-            <div className="text-3xl font-medium my-8">
-              Running on <br />5 chains
+            <div className="text-3xl font-medium mt-8">
+              Running on 5 <br/>different chains
             </div>
             <div className="flex-1 flex flex-wrap px-12 gap-x-3 justify-around items-center">
               <div className="bg-white w-16 h-16 shadow-lg rounded-full flex items-center justify-center">
@@ -93,12 +94,15 @@ const ExchangePage = () => {
               <div className="bg-white w-16 h-16 shadow-lg rounded-full flex items-center justify-center">
                 <img src="/images/xdai.png" width={43} height={43} alt="xdai" />
               </div>
-              <div className="bg-white w-16 h-16 shadow-lg rounded-full flex items-center justify-center"></div>
+              <div className="bg-white w-16 h-16 shadow-lg rounded-full flex items-center justify-center">
+                <img src="/images/huobi.png" width={60} height={60} alt="huobi" />
+              </div>
               <div className="bg-white w-16 h-16 shadow-lg rounded-full flex items-center justify-center transform -translate-y-8">
                 <img src="/images/polygon.png" width={40} height={41} alt="polygon" />
               </div>
             </div>
-            <p className="text-xs text-gray-600">We are constantly adding additional chains</p>
+            <p className="text-xs text-gray-600 mb-3">and continuously adding more</p>
+
           </div>
           <div className={componentClasses.gradientCard}>
             <div className="text-3xl font-medium my-8">
@@ -114,7 +118,9 @@ const ExchangePage = () => {
               <br />
               Indexes
             </div>
-            <p className="text-xs text-gray-600">Coming Soon</p>
+            <a className={classnames(componentClasses.buttonPrimary, 'shadow-xl mx-12')} href="https://app.dsynths.com/markets"  target="_blank" rel="noreferrer noopener">
+            Visit Markets
+            </a>
           </div>
         </div>
       </section>

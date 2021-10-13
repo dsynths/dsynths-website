@@ -8,88 +8,69 @@ import * as componentClasses from '../styles'
 import { Sidebar } from './Sidebar'
 import { ChevronDown } from '../Icons'
 
-const NavLinks = () => (
-  <>
-    <Menu as="div" className="relative">
-      <Menu.Button
-        className={classnames(
-          componentClasses.link,
-          'flex items-center space-x-2 cursor-pointer focus:outline-none'
-        )}
-      >
-        <span>Products</span>
-        <ChevronDown className="w-3 h-3" />
-      </Menu.Button>
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-200"
-        enterFrom="opacity-0 -translate-y-1"
-        enterTo="opacity-100 translate-y-0"
-        leave="transition ease-in duration-150"
-        leaveFrom="opacity-100 translate-y-0"
-        leaveTo="opacity-0 -translate-y-1"
-      >
-        <Menu.Items className="absolute w-max max-w-sm px-4 mt-6 transform -translate-x-1/2 left-1/2 sm:px-0 focus:outline-none">
-          <div className="overflow-hidden rounded-lg shadow-xl ring-1 ring-black ring-opacity-5">
-            <div className="relative bg-white px-6 py-3">
-              <ul className="flex flex-col space-y-2">
-                <Menu.Item>
-                  {({ active }) => (
-                    <li>
-                      <Link href="/products/exchange">
-                        <a className={componentClasses.menuLink(active)}>Exchange</a>
-                      </Link>
-                    </li>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <li>
-                      <Link href="/products/iframe">
-                        <a className={componentClasses.menuLink(active)}>iFrame Integration</a>
-                      </Link>
-                    </li>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <li>
-                      <Link href="/products/api">
-                        <a className={componentClasses.menuLink(active)}>Synth API</a>
-                      </Link>
-                    </li>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <li>
-                      <Link href="/products/fiat">
-                        <a className={componentClasses.menuLink(active)}>Fiat On-Ramp</a>
-                      </Link>
-                    </li>
-                  )}
-                </Menu.Item>
-              </ul>
-            </div>
-          </div>
-        </Menu.Items>
-      </Transition>
-    </Menu>
+import { navigationMapping } from '../../constants/data/navbar'
 
-    <ul className="flex items-center space-x-8">
-      <li>
-        <Link href="/learn">
-          <a className={componentClasses.link}>Learn</a>
-        </Link>
-      </li>
-      <li>
-        {/* TODO change the link once we have it */}
-        <Link href="/learn">
-          <a className={componentClasses.link}>Developers</a>
-        </Link>
-      </li>
-    </ul>
-  </>
+const NavLinks = () => (
+  <ul className="flex items-center space-x-8">
+    {navigationMapping.length && navigationMapping.map(o => {
+      const { category, items } = o
+      const isMenu = items.length > 1 ? true : false
+
+      return isMenu ? (
+        <li key={category}>
+          <Menu as="div" className="relative">
+            <Menu.Button
+              className={classnames(
+                componentClasses.link,
+                'flex items-center space-x-2 cursor-pointer focus:outline-none'
+              )}
+            >
+              <span>{category}</span>
+              <ChevronDown className="w-3 h-3" />
+            </Menu.Button>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 -translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 -translate-y-1"
+            >
+              <Menu.Items className="absolute w-max max-w-sm px-4 mt-6 transform -translate-x-1/2 left-1/2 sm:px-0 focus:outline-none">
+                <div className="overflow-hidden rounded-lg shadow-xl ring-1 ring-black ring-opacity-5">
+                  <div className="relative bg-white px-6 py-3">
+                    <ul className="flex flex-col space-y-2">
+                      {items.map((item, index) => {
+                        const { title, href } = item
+                        return (
+                          <Menu.Item key={index}>
+                            {({ active }) => (
+                              <li>
+                                <Link href={href}>
+                                  <a className={componentClasses.menuLink(active)}>{title}</a>
+                                </Link>
+                              </li>
+                            )}
+                          </Menu.Item>
+                        )
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              </Menu.Items>
+            </Transition>
+          </Menu>
+        </li>
+      ) : (
+        <li key={category}>
+          <Link href={o.items[0].href}>
+            <a className={componentClasses.link}>{o.items[0].title}</a>
+          </Link>
+        </li>
+      )
+    })}
+  </ul>
 )
 
 const Navbar = () => {
@@ -111,7 +92,7 @@ const Navbar = () => {
         <NavLinks />
       </nav>
       <div className="flex">
-        <a href="#" className={componentClasses.button}>
+        <a href="https://app.dsynths.com" className={componentClasses.button} target="_blank" rel="noreferrer noopener">
           Launch App
         </a>
       </div>
@@ -143,54 +124,34 @@ const Navbar = () => {
       </button>
       <Sidebar toggled={sidebarOpen} handleToggled={toggleSidebar}>
         <nav className="flex flex-col py-8 px-6 space-y-4">
-          <div>Products</div>
-          <ul className="flex flex-col px-6 space-y-4">
-            <li>
-              <Link href="/products/exchange">
+          {navigationMapping.map(o => {
+            const { category, items } = o
+            const isMenu = items.length > 1 ? true : false
+            return isMenu ? (
+              <div key={category}>
+                <div>{category}</div>
+                <ul className="flex flex-col px-6 space-y-4">
+                  {items.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <Link href={item.href}>
+                          <a className={componentClasses.link} onClick={() => toggleSidebar()}>
+                            {item.title}
+                          </a>
+                        </Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            ) : (
+              <Link href={items[0].href} key={category}>
                 <a className={componentClasses.link} onClick={() => toggleSidebar()}>
-                  Exchange
+                  {items[0].title}
                 </a>
               </Link>
-            </li>
-            <li>
-              <Link href="/products/iframe">
-                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
-                  iFrame Integration
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/products/api">
-                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
-                  Synth API
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/products/fiat">
-                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
-                  Fiat On-Ramp
-                </a>
-              </Link>
-            </li>
-          </ul>
-          <ul className="flex flex-col space-y-4">
-            <li>
-              <Link href="/learn">
-                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
-                  Learn
-                </a>
-              </Link>
-            </li>
-            <li>
-              {/* TODO change link once we have it */}
-              <Link href="/learn">
-                <a className={componentClasses.link} onClick={() => toggleSidebar()}>
-                  Developers
-                </a>
-              </Link>
-            </li>
-          </ul>
+            )
+          })}
         </nav>
       </Sidebar>
     </div>

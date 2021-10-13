@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { useRef } from 'react'
 import { classnames } from 'tailwindcss-classnames'
-import { PlusIcon } from '../components/Icons'
 
+import { PlusIcon } from '../components/Icons'
+import { productsMapping } from '../constants/data/home'
 import * as componentClasses from '../components/styles'
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center max-w-6xl px-8 w-full mx-auto">
           <div className="lg:my-48 mt-16 mb-8 relative md:z-10">
             <h1 className="text-white font-bold text-4xl mb-4 sm:text-6xl">
-              Dentralized Stock Exchange
+              The Dentralized Stock Exchange
             </h1>
             <p className="text-white text-xl mb-4">No Signup. No KYC. Welcome to Web3.</p>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-4 sm:space-y-0">
@@ -51,75 +52,28 @@ const Home = () => {
         </h2>
         <p className="text-lg mt-2">Running on &amp; interacting with multiple blockchains.</p>
         <div className="overflow-x-auto">
-          <div className="mt-16 p-7 grid grid-cols-4 gap-x-6 max-w-5xl w-full min-w-max mx-auto">
-            <div className={componentClasses.productCard}>
-              <div className="text-3xl font-medium my-8">Exchange</div>
-              <p className="flex-1">
-                Trade and manage over 50,000 synthetic derivates without having to signup, nor
-                experience slippage. Basic &amp; Advanced interfaces.
-              </p>
-              <img
-                className="my-12 mx-auto"
-                src="/images/homepage-exchange.png"
-                alt="exchange illustration"
-                width={185}
-                height={115}
-              />
-              <Link href="/products/exchange">
-                <a className={componentClasses.productCardLink}>Start Trading</a>
-              </Link>
-            </div>
-            <div className={componentClasses.productCard}>
-              <div className="text-3xl font-medium my-8">iFrames</div>
-              <p className="flex-1">
-                Offer derivatives, and the trading thereof, on your website without the burden of
-                having to create your own infrastructure.
-              </p>
-              <img
-                className="my-12 mx-auto"
-                src="/images/homepage-iframes.png"
-                alt="iframes model"
-                width={185}
-                height={115}
-              />
-              <Link href="/products/iframe">
-                <a className={componentClasses.productCardLink}>Learn More</a>
-              </Link>
-            </div>
-            <div className={componentClasses.productCard}>
-              <div className="text-3xl font-medium my-8">API</div>
-              <p className="flex-1">
-                Get the latest market information via our REST API, covering: contracts, images,
-                depth &amp; prices. WebSockets are available for direct orale-price feeds.
-              </p>
-              <img
-                className="my-12 mx-auto"
-                src="/images/homepage-api.png"
-                alt="api model"
-                width={115}
-                height={115}
-              />
-              <Link href="/products/api">
-                <a className={componentClasses.productCardLink}>Learn More</a>
-              </Link>
-            </div>
-            <div className={componentClasses.productCard}>
-              <div className="text-3xl font-medium my-8">Fiat Gateway</div>
-              <p className="flex-1">
-                Load up your blockchain wallet directly from your IBAN account, without interacting
-                with our servers.
-              </p>
-              <img
-                className="my-12 mx-auto"
-                src="/images/homepage-fiat-gateway.png"
-                alt="fiat gateway illustration"
-                width={185}
-                height={115}
-              />
-              <Link href="/products/fiat">
-                <a className={componentClasses.productCardLink}>Learn More</a>
-              </Link>
-            </div>
+          <div className="mt-16 p-7 grid grid-cols-4 gap-x-6 max-w-3xl w-full min-w-max mx-auto">
+            {productsMapping.length && productsMapping.map((product, i) => {
+              const { href, title, subtitle, img, link } = product
+              return (
+                <Link href={href} key={i}>
+                  <a className={componentClasses.productCard} >
+                    <div className="text-3xl font-medium my-8">{title}</div>
+                    <p className="flex-1">{subtitle}</p>
+                    <img
+                    className="my-3 md:my-6 mx-auto max-h="
+                      src={img.src}
+                      alt={img.alt}
+                      style={{
+                        height: '120px',
+                        width: 'auto'
+                      }}
+                    />
+                    <div className={componentClasses.productCardLink}>{link}</div>
+                  </a>
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -176,9 +130,11 @@ const Home = () => {
               we don&apos;t hold customer records nor have a trading engine. Your entire trading
               experience is done through Web3.
             </p>
-            <a className={componentClasses.howItWorksCardLink} href="#">
-              Go to Exchange ↗
-            </a>
+            <Link href="/products/exchange">
+              <a className={componentClasses.howItWorksCardLink}>
+                Go to Exchange ↗
+              </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -44,7 +44,7 @@ export const heroContainer = classnames(
 )
 
 export const productCard = classnames(
-  'w-80 px-4 py-6 bg-white shadow-card rounded-3xl ring-1 ring-gray-100 transition-transform hover:-translate-y-5 duration-500 flex flex-col group'
+  'w-64 sm:w-80 px-4 py-6 bg-white shadow-card rounded-3xl ring-1 ring-gray-100 transition-transform hover:-translate-y-4 duration-500 flex flex-col group'
 )
 
 export const productCardLink = classnames(
