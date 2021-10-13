@@ -20,8 +20,9 @@
   }
 
   html {
-    @apply overflow-hidden;
+    @apply overflow-auto;
   }
+
 
   body {
     @apply h-full text-base text-ds-black;
@@ -60,7 +61,7 @@
   }
 
   /* Works on Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+  /* *::-webkit-scrollbar {
     width: 5px;
     height: 5px;
   }
@@ -68,6 +69,17 @@
   *::-webkit-scrollbar-thumb {
     background: #6c7284;
     border: 1px solid black;
+  } */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 
   /* Custom Styles */

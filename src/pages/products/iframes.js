@@ -3,7 +3,7 @@ import { classnames } from 'tailwindcss-classnames'
 import Layout from '../../components/Layout'
 import * as componentClasses from '../../components/styles'
 
-const iFramePage = () => {
+const iFramesPage = () => {
   return (
     <Layout>
       <div className={classnames(componentClasses.heroContainer, 'h-full')}>
@@ -29,4 +29,4 @@ const iFramePage = () => {
   )
 }
 
-export default iFramePage
+export default iFramesPage

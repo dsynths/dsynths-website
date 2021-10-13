@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Logo from '../Logo'
 import * as componentStyles from '../styles'
 
+import { footerMapping } from '../../constants/data/footer'
+
 const Footer = () => {
   return (
     <div className="bg-ds-purple text-purple-100 py-9 px-6">
@@ -20,118 +22,27 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-between md:justify-around flex-wrap flex-shrink-0">
-          <div className="">
-            <h4 className="mb-4 text-white">Products</h4>
-            <ul>
-              <li>
-                <Link href="#">
-                  <a className={componentStyles.footerLink}>Exchange</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <a className={componentStyles.footerLink}>iFrames</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <a className={componentStyles.footerLink}>Synth API</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <a className={componentStyles.footerLink}>Fiat On-Ramp</a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="">
-            <h4 className="mb-4 text-white">Resources</h4>
-            <ul>
-              <li>
-                <Link href="#">
-                  <a
-                    className={componentStyles.footerLink}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Medium
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="https://github.com/dsynths">
-                  <a
-                    className={componentStyles.footerLink}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    GitHub
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <a
-                    className={componentStyles.footerLink}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Learn
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <a
-                    className={componentStyles.footerLink}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Developers
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="">
-            <h4 className="mb-4 text-white">Socials</h4>
-            <ul>
-              <li>
-                <Link href="https://t.me/dsynths">
-                  <a
-                    className={componentStyles.footerLink}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Telegram
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="https://twitter.com/dsynths">
-                  <a
-                    className={componentStyles.footerLink}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Twitter
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="https://discord.gg/bkaNfHRR">
-                  <a
-                    className={componentStyles.footerLink}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Discord
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {footerMapping.length && footerMapping.map(o => (
+            <div key={o.category}>
+              <h4 className="mb-4 text-white font-bold">{o.category}</h4>
+              <ul>
+                {o.items.map((item, index) => {
+                  const { title, external, href } = item
+                  return (external) ? (
+                    <li key={index}>
+                      <a className={componentStyles.footerLink} href={href} target="_blank" rel="noreferrer noopener">{title}</a>
+                    </li>
+                  ) : (
+                    <li key={index}>
+                      <Link href={href}>
+                        <a className={componentStyles.footerLink}>{title}</a>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </div>

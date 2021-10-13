@@ -36,15 +36,19 @@ export const menuLink = (active) => classnames('flex', { 'text-ds-purple': activ
 export const footerLink = classnames('no-underline hover:text-white focus:text-white')
 
 export const productTitle = classnames(
-  'title-gradient text-transparent bg-clip-text font-bold text-4xl'
+  'title-gradient text-transparent bg-clip-text font-bold text-3xl sm:text-4xl'
 )
 
 export const heroContainer = classnames(
   'flex flex-col md:flex-row justify-around items-center hero-gradient pt-16 md:pt-28 pb-12 md:pb-20 px-6 space-x-2 space-y-9 md:space-y-0'
 )
 
+export const learnContainer = classnames(
+  'flex flex-col md:flex-row justify-center items-center hero-gradient pt-16 md:pt-28 pb-12 md:pb-20 px-6 space-x-2 space-y-9 md:space-y-0'
+)
+
 export const productCard = classnames(
-  'w-80 px-4 py-6 bg-white shadow-card rounded-3xl ring-1 ring-gray-100 transition-transform hover:-translate-y-5 duration-500 flex flex-col group'
+  'w-64 sm:w-80 px-4 py-6 bg-white shadow-card rounded-3xl ring-1 ring-gray-100 transition-transform hover:-translate-y-4 duration-500 flex flex-col group'
 )
 
 export const productCardLink = classnames(
@@ -68,4 +72,8 @@ export const statsCard = classnames(
 
 export const gradientCard = classnames(
   'hero-gradient pt-12 pb-9 w-96 rounded-3xl flex flex-col h-[450px] md:h-[600px]'
+)
+
+export const smallBreak = classnames(
+  'inline-block sm:hidden'
 )
