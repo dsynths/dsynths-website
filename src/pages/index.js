@@ -46,13 +46,13 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="homepage-first-section-gradient text-center py-16" ref={productsRef}>
+      <section className="homepage-first-section-gradient text-center pt-8 sm:pt-16 px-4" ref={productsRef}>
         <h2 id="explore-our-products" className="text-4xl font-medium">
           Explore our Products
         </h2>
-        <p className="text-lg mt-2">Running on &amp; interacting with multiple blockchains.</p>
+        <p className="text-lg mt-2 px-2">Running on &amp; interacting with multiple blockchains.</p>
         <div className="overflow-x-auto">
-          <div className="mt-16 p-7 grid grid-cols-4 gap-x-6 max-w-3xl w-full min-w-max mx-auto">
+          <div className="my-2 sm:my-10 p-7 px-2 grid grid-cols-4 gap-x-6 max-w-3xl w-full min-w-max mx-auto">
             {productsMapping.length && productsMapping.map((product, i) => {
               const { href, title, subtitle, img, link } = product
               return (
@@ -61,7 +61,7 @@ const Home = () => {
                     <div className="text-3xl font-medium my-8">{title}</div>
                     <p className="flex-1">{subtitle}</p>
                     <img
-                    className="my-3 md:my-6 mx-auto max-h="
+                    className="my-3 md:my-6 mx-auto"
                       src={img.src}
                       alt={img.alt}
                       style={{
@@ -78,8 +78,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="homepage-mid-section-gradient text-center pt-16 pb-8 px-4">
-        <h2 className="text-4xl font-medium">How does dSYNTHS works?</h2>
+      <section className="homepage-mid-section-gradient text-center pt-8 sm:pt-16 px-4">
+        <h2 className="text-4xl font-medium">How does <br className={classnames(componentClasses.smallBreak)}/>dSYNTHS work?</h2>
         <p className="text-lg mt-2 mb-10 ">Leveraging ground breaking technologies.</p>
 
         <div className="flex flex-col gap-0 flex-wrap w-full mx-auto text-center relative">
@@ -139,10 +139,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="text-center py-16 px-4">
+      <section className="text-center pt-12 sm:pt-16 px-4">
         <h2 className="text-4xl font-medium">Unique Characteristics</h2>
         <p className="text-lg mt-2">Beyond anything you&apos;ve ever experienced.</p>
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 max-w-5xl w-full mx-auto">
+        <div className="mt-4 sm:mt-16 grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 max-w-5xl w-full mx-auto">
           <div
             className={classnames(
               componentClasses.characteristicsCard,
@@ -150,8 +150,7 @@ const Home = () => {
             )}
           >
             <p className="flex-1 max-w-xs">
-              No slippage! Groundbreaking vault technology provided by the DEUS Protocol makes this
-              possible.
+              No slippage! Groundbreaking vault technology provided by the DEUS Protocol makes this possible.
             </p>
           </div>
           <div
@@ -188,11 +187,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="homepage-last-section-gradient text-center py-16">
-        <div className="mb-16">
+      <section className="homepage-last-section-gradient text-center py-12 sm:py-16 px-4">
+        <div className="mb-12">
           <h2 className="text-4xl font-medium">Astonishing growth of our Exchange</h2>
           <p className="text-lg mt-2">Numbers speak louder than words.</p>
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 justify-center gap-5 max-w-4xl w-full min-w-max mx-auto">
+          <div className="mt-4 sm:mt-16 grid grid-cols-1 md:grid-cols-3 justify-center gap-5 max-w-4xl w-full min-w-max mx-auto">
             <div className={componentClasses.statsCard}>
               <div className="flex h-20 w-20 items-center justify-center">
                 <img
@@ -233,12 +232,12 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mt-32 px-4">
+        <div className="mt-8 md:mt-32 px-4">
           <h2 className="text-4xl mt-0 font-medium">How do I Sign-Up?</h2>
-          <p className="text-lg mt-2 mb-10">You don&apos;t have to. Seriously.</p>
+          <p className="text-lg mt-2 mb-4 sm:mb-10">You don&apos;t have to. Seriously.</p>
 
-          <div className="homepage-signup-inst-card-gradient max-w-3xl p-10 shadow-sm rounded-3xl text-left text-lg mx-auto">
-            <p className="mt-4">
+          <div className="homepage-signup-inst-card-gradient max-w-3xl p-4 sm:p-10 shadow-sm rounded-3xl text-left text-lg mx-auto">
+            <p className="mt-0 sm:mt-4">
               Web3 is the latest technological advancement where smart contract technology powers
               the way you intereact with applications. Web3 apps are decentralized, permissionless
               and completely trustless.

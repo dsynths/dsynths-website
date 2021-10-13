@@ -28,14 +28,14 @@ const Footer = () => {
               <ul>
                 {o.items.map((item, index) => {
                   const { title, external, href } = item
-                  const aProps = (external)
-                    ? { className: componentStyles.footerLink, target: "_blank", rel: "noreferrer noopener" }
-                    : { className: componentStyles.footerLink }
-
-                  return (
+                  return (external) ? (
+                    <li key={index}>
+                      <a className={componentStyles.footerLink} href={href} target="_blank" rel="noreferrer noopener">{title}</a>
+                    </li>
+                  ) : (
                     <li key={index}>
                       <Link href={href}>
-                        <a {...aProps}>{title}</a>
+                        <a className={componentStyles.footerLink}>{title}</a>
                       </Link>
                     </li>
                   )

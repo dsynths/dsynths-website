@@ -60,6 +60,17 @@
     scrollbar-color: #6c7284 transparent;
   }
 
+  /* Works on Chrome, Edge, and Safari */
+  /* *::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #6c7284;
+    border: 1px solid black;
+  } */
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -72,6 +83,7 @@
   }
 
   /* Custom Styles */
+
   .hero-gradient {
     background: linear-gradient(
       148.07deg,
