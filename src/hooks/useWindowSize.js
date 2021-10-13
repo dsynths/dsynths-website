@@ -8,7 +8,7 @@ export const useWindowSize = () => {
       width: isClient ? window.innerWidth : undefined,
       height: isClient ? window.innerHeight : undefined,
     }
-  }, [])
+  }, [isClient])
 
   const [windowSize, setWindowSize] = useState(getSize)
 

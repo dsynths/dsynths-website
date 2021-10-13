@@ -62,7 +62,7 @@ const Home = () => {
                     <div className="text-3xl font-medium my-8">{title}</div>
                     <p className="flex-1">{subtitle}</p>
                     <img
-                    className="my-3 md:my-6 mx-auto"
+                      className="my-3 md:my-6 mx-auto"
                       src={img.src}
                       alt={img.alt}
                       style={{

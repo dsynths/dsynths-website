@@ -1,23 +1,23 @@
 export const navigationMapping = [
   {
-    category: "Products",
+    category: 'Products',
     items: [
-      { title: "Exchange", href: "/products/exchange"},
-      { title: "iFrames", href: "/products/iframes"},
-      { title: "Synth API", href: "/products/api"},
-      { title: "Fiat On-Ramp", href: "/products/fiat"},
+      { title: 'Exchange', href: '/products/exchange'},
+      { title: 'iFrames', href: '/products/iframes'},
+      { title: 'Synth API', href: '/products/api'},
+      { title: 'Fiat On-Ramp', href: '/products/fiat'},
     ],
   },
   {
-    category: "Learn",
+    category: 'Learn',
     items: [
-      { title: "Learn", href: "/learn"},
+      { title: 'Learn', href: '/learn'},
     ],
   },
   {
-    category: "Developers",
+    category: 'Developers',
     items: [
-      { title: "Developers", href: "/learn"},
+      { title: 'Developers', href: '/learn'},
     ],
   },
 ]
