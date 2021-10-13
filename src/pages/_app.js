@@ -1,13 +1,7 @@
 import '../styles/index.css'
 
-import Layout from '../components/Layout'
-
 const MyApp = ({ Component, pageProps }) => {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+  return <Component {...pageProps} />
 }
 
 export default MyApp

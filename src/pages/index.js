@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import { useRef } from 'react'
 import { classnames } from 'tailwindcss-classnames'
-import { PlusIcon } from '../components/Icons'
 
+import Layout from '../components/Layout'
+import { PlusIcon } from '../components/Icons'
 import * as componentClasses from '../components/styles'
 
 const Home = () => {
   const productsRef = useRef(null)
 
   return (
-    <>
+    <Layout>
       <div className="home-hero-gradient overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center max-w-6xl px-8 w-full mx-auto">
           <div className="lg:my-48 mt-16 mb-8 relative md:z-10">
@@ -33,7 +34,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="relative w-full h-full lg:py-16 pb-8" >
+          <div className="relative w-full h-full lg:py-16 pb-8">
             <img
               src="/images/phone-homepage.png"
               width={956}
@@ -303,7 +304,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
 

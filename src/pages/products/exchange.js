@@ -1,8 +1,9 @@
+import Layout from '../../components/Layout'
 import * as componentClasses from '../../components/styles'
 
 const ExchangePage = () => {
   return (
-    <>
+    <Layout>
       <div className={componentClasses.heroContainer}>
         <div>
           <h1 className={componentClasses.productTitle}>
@@ -118,7 +119,7 @@ const ExchangePage = () => {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
 
