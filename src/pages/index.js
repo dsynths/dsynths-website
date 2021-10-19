@@ -16,7 +16,7 @@ const Home = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center max-w-6xl px-8 w-full mx-auto">
           <div className="lg:my-48 mt-16 mb-8 relative md:z-10">
             <h1 className="text-white font-bold text-4xl mb-4 sm:text-6xl">
-              The Dentralized Stock Exchange
+              Crosschain Decentralized Stock Exchange
             </h1>
             <p className="text-white text-xl mb-4">No Signup. No KYC. Welcome to Web3.</p>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-4 sm:space-y-0">
@@ -42,7 +42,7 @@ const Home = () => {
               alt="exchange app"
               width={956}
               height={502}
-              className="lg:absolute w-full lg:w-[500px] lg:max-w-[200%] lg:top-32"
+              className="lg:absolute w-full md:w-[500px] lg:max-w-[150%] lg:top-32 lg:ml-10"
             />
             {/*<img
               src="/images/phone-homepage.png"
