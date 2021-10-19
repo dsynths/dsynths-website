@@ -43,6 +43,10 @@ export const heroContainer = classnames(
   'flex flex-col md:flex-row justify-around items-center hero-gradient pt-16 md:pt-28 pb-12 md:pb-20 px-6 space-x-2 space-y-9 md:space-y-0 min-h-3/4'
 )
 
+export const heroContainerStacked = classnames(
+  'flex flex-col justify-around items-center hero-gradient pt-16 md:pt-28 px-6'
+)
+
 export const learnContainer = classnames(
   'flex flex-col md:flex-row justify-center items-center hero-gradient pt-16 md:pt-28 pb-12 md:pb-20 px-6 space-x-2 space-y-9 md:space-y-0'
 )
@@ -71,7 +75,7 @@ export const statsCard = classnames(
 )
 
 export const gradientCard = classnames(
-  'hero-gradient pt-12 pb-9 w-96 rounded-3xl flex flex-col h-[450px] md:h-[600px]'
+  'hero-gradient pt-12 pb-9 w-full sm:w-96 rounded-3xl flex flex-col h-[450px] md:h-[600px]'
 )
 
 export const smallBreak = classnames(

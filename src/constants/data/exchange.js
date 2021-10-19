@@ -1,6 +1,6 @@
 export const exchangeMapping = [
   {
-    href: 'https://app.dsynths.com/exchange/simple',
+    href: 'https://app.dsynths.com/exchange/simple?network=xdai',
     title: 'Simple',
     subtitle: 'Simple interface without any bells or whistles. Only the necessary buttons to ape.',
     img: {
@@ -10,7 +10,7 @@ export const exchangeMapping = [
     link: 'Go to Simple ↗'
   },
   {
-    href: 'https://app.dsynths.com/exchange/basic',
+    href: 'https://app.dsynths.com/exchange/basic?network=xdai',
     title: 'Basic',
     subtitle: 'The Simple Interface, but with an additional price widget, a marketlist, and ability to toggle favorites.',
     img: {

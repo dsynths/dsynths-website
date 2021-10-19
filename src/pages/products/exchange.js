@@ -6,24 +6,14 @@ import { exchangeMapping } from '../../constants/data/exchange'
 const ExchangePage = () => {
   return (
     <Layout>
-      <div className={componentClasses.heroContainer}>
+      <div className={classnames(componentClasses.heroContainerStacked, 'md:text-center')}>
         <div>
           <h1 className={classnames(componentClasses.productTitle, 'break-words')}>
             Trade Synthetics, Stocks, Commodities &amp; Crypto
           </h1>
-          <p className="text-xl mt-2">No Fees. No Slippage. No KYC.</p>
+          <p className="text-xl mt-2">Low Fees. No Slippage. No KYC.</p>
         </div>
-        <div>
-          <img src="/images/products-exchange.png" alt="Exchange" width={581} height={455} />
-        </div>
-      </div>
-
-      <section className="bg-white text-center pt-8 sm:pt-16 px-4">
-        <h2 className="text-4xl font-medium">
-          A Trading Interface for All
-        </h2>
-        <p className="text-lg mt-2">Same thing under the hood, different experiences.</p>
-        <div className="overflow-x-auto">
+        <div className="w-full overflow-x-scroll text-center">
           <div className="my-10 sm:mt-16 sm:p-7 px-2 grid grid-cols-3 gap-x-6 max-w-3xl w-full min-w-max mx-auto">
             {exchangeMapping.length && exchangeMapping.map((product, i) => {
               const { href, title, subtitle, img, link } = product
@@ -50,7 +40,7 @@ const ExchangePage = () => {
             })}
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="text-center py-16 px-4 section-gradient">
         <h2 className="text-4xl font-medium">Explore our Markets</h2>

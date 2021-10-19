@@ -7,6 +7,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     minHeight: {
+      '1/2': '50vh',
       '3/4': '75vh'
     },
     extend: {

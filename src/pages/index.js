@@ -20,11 +20,12 @@ const Home = () => {
             </h1>
             <p className="text-white text-xl mb-4">No Signup. No KYC. Welcome to Web3.</p>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-4 sm:space-y-0">
-              <Link href="/products/exchange">
-                <a className={classnames(componentClasses.buttonPrimary, 'shadow-xl')}>
-                  Start Trading Now
-                </a>
-              </Link>
+              <a
+                className={classnames(componentClasses.buttonPrimary, 'shadow-xl')}
+                href={'https://app.dsynths.com'}
+                target="_blank"
+                rel="noreferrer noopener"
+              >Start Trading Now</a>
               <button
                 className={classnames(componentClasses.linkSecondary)}
                 onClick={() => {
@@ -37,12 +38,19 @@ const Home = () => {
           </div>
           <div className="relative w-full h-full lg:py-16 pb-8">
             <img
+              src="/images/products-exchange.png"
+              alt="exchange app"
+              width={956}
+              height={502}
+              className="lg:absolute w-full lg:w-[500px] lg:max-w-[200%] lg:top-32"
+            />
+            {/*<img
               src="/images/phone-homepage.png"
               width={956}
               height={502}
               className="lg:absolute mix-blend-color-dodge w-full lg:w-[956px] lg:max-w-[200%] lg:top-8 lg:-left-44"
               alt="dsynths app screenshot"
-            />
+            />*/}
           </div>
         </div>
       </div>
