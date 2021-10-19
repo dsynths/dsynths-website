@@ -179,7 +179,7 @@ const Home = () => {
             )}
           >
             <p className="flex-1 max-w-xs">
-              Orcale verified, real-time prices. Quotes are pegged to the underlying market prices.
+              Oracle verified, real-time prices. Quotes are pegged to the underlying market prices.
             </p>
           </div>
           <div
