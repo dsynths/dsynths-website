@@ -245,7 +245,7 @@ const Home = () => {
             </p>
             <p className="mt-4">
               At dSynths , no user records are stored, no matchmaking takes place and most
-              importantly, we don&apos;t tell you what you can and can not do. Wihtin market hours,
+              importantly, we don&apos;t tell you what you can and can not do. Within market hours,
               you can buy and sell stocks from wherever and whenever.
             </p>
             <p className="mt-4">

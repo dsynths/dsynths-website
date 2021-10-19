@@ -22,7 +22,7 @@ export const productsMapping = [
   {
     href: '/products/api',
     title: 'API',
-    subtitle: 'Get the latest market information via our REST API, covering: contracts, images, depth & prices. WebSockets are available for direct orale-price feeds.',
+    subtitle: 'Get the latest market information via our REST API, covering: contracts, images, depth & prices. WebSockets are available for direct oracle-price feeds.',
     img: {
       src: '/images/homepage-api.png',
       alt: 'api illustration',
