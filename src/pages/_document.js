@@ -47,6 +47,9 @@ class MyDocument extends Document {
 
             <link rel="manifest" href="/manifest.json" />
             <title>dSynths</title>
+
+            <script defer data-domain="dsynths.com" src="https://plausible.io/js/plausible.js"></script>
+            
           </>
         </Head>
         <body>
